@@ -1,0 +1,38 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    margin: 0 auto;
+    min-height: 100vh;
+    line-height: 1.65;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: cadetblue;
+    font-size: var(--fs);
+    font-weight: 500;
+}
+
+article {
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-style: solid;
+    background-color: yellowgreen;
+}
+
+article > * {
+    flex: 1 1 0;
+}
