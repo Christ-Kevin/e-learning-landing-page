@@ -1,3 +1,46 @@
+/* design system */
+/* 
+#Mobil 
+*/
+
+:root {
+    --fs-basis: 1rem;
+    --fs-basis-desktop: 1.125rem;
+    --fs-h2-basis: 1.25rem;
+    --fs-h2-desktop: 1.5rem;
+    --fs-h1-basis: 2.5rem;
+    --fs-h1-desktop: 3.5rem;
+
+    --fs-skilled: 2.25rem;
+
+    --ff: 'Plus Jakarta Sans', sans-serif;
+
+    --fw-basis: 500;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    --line-height-skilled: 2.835rem;
+
+    --line-height-basis: 1.75rem;
+    --line-height-headingM: 2.5rem;
+    --line-height-headingL: 3.1875rem;
+    --line-height-headingXL: 4.375rem;
+
+    --bg-neutral: hsl(0, 0%, 100%);
+    --bg-body: hsl(0, 0%, 98%);
+    --bg-button3: hsl(237, 100%, 64%);
+    --bg-button3-hover: hsl(322, 87%, 55%);
+    --bg-button2: hsl(322, 87%, 55%);
+    --bg-button2-hover: hsl(13, 100%, 64%);
+    --bg-button1: hsl(233, 54%, 16%);
+    --bg-button1-hover: hsl(234, 25%, 52%);
+
+    --color-a-default: hsl(341, 92%, 62%);
+    --color-a-hover: hsl(341, 100%, 83%);
+    --color-title: hsl(233, 54%, 16%);
+    --color-body: hsl(232, 10%, 56%);
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -12,27 +55,128 @@
 
 /* Set core body defaults */
 body {
-    margin: 0 auto;
-    min-height: 100vh;
-    line-height: 1.65;
-    width: 900px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: cadetblue;
-    font-size: var(--fs);
-    font-weight: 500;
+
+    margin: 0 auto;
+    padding: 1rem 1rem 0 1rem;
+    min-height: 100vh;
+    line-height: var(--line-height-basis);
+    font-size: var(--fs-basis);
+    font-weight: var(--fw-basis);
+    font-family: var(--ff);
+    text-align: left;
+    background-color: var(--bg-body);
 }
 
-article {
-    width: 800px;
+body > *,
+main > * {
+    background-color: var(--bg-neutral);
+}
+
+div:nth-of-type(2) {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-style: solid;
-    background-color: yellowgreen;
+    flex-direction: column;
+    align-items: center;
 }
 
-article > * {
-    flex: 1 1 0;
+/*button {
+    margin-top: 1.5rem;
+    display: inline-flex;
+    /* center items horizontally and vertically */
+/*align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: white;
+    color: var(--bg-color);
+    text-align: center;
+    font-family: var(--ff-poppins);
+    border-radius: 1.125rem;
+    padding-top: 0.8125rem;
+    padding-bottom: 0.8125rem;
+    width: 200px;
+    height: 40px;
+}*/
+
+div:first-of-type,
+footer div:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+article h2 {
+    padding-top: 2.375rem;
+    padding-bottom: 1.625rem;
+}
+
+article p {
+    padding-bottom: 1.5rem;
+}
+
+main {
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 5rem;
+}
+
+main > * {
+    width: 100%;
+    border-radius: 0.625rem;
+    margin-bottom: 2.5em;
+}
+
+footer,
+.button1 {
+    background-color: var(--bg-button1);
+}
+
+.button2,
+h1 {
+    background-color: var(--bg-button2);
+}
+
+.button3 {
+    background-color: var(--bg-button3);
+}
+
+@media(min-width: 40em) {
+    body {
+        padding: 1.5rem 2.5rem 0 2.5rem;
+    }
+
+    div:nth-of-type(2) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main > * {
+        width: calc(50% - .5rem);
+        margin-bottom: 3.5em;
+    }
+}
+
+@media(min-width: 64em) {
+    body {
+        padding: 1.5rem 10rem 0 10rem;
+
+        font-size: 1.125rem;
+    }
+
+    main {
+        gap: 1.875rem;
+    }
+
+    main > * {
+        width: calc(33.33% - 1.25rem);
+        margin-bottom: 5rem;
+    }
 }
