@@ -11,16 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
 
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement("picture");
+    </script>
+
+    <script src="./js/pictureFill.min.js" async></script>
+
     <title>Frontend Mentor | Skilled e-learning landing page</title>
 </head>
 
 <body>
 
     <div>
-        <img src="./assets/logo-dark.svg" alt="logo skilled"><button class="button1">Get Started</button>
+        <img src="./assets/logo-dark.svg" alt="logo skilled" class="logo"><button class="button1">Get Started</button>
     </div>
 
-    <div>
+    <div class="header">
         <article>
             <h2>Maximize skill, minimize budget</h2>
 
@@ -29,52 +36,62 @@
             </p>
             <button class="button2">Get Started</button>
         </article>
-        <aside>
-            <div>
-                <img src="./assets/image-hero-mobile.png" srcset="./assets/image-hero-mobile.png 435w, ./assets/image-hero-tablet.png 695w, ./assets/image-hero-mobile@2x.png 870w, ./assets/image-hero-desktop.png 1046w, ./assets/image-hero-tablet@2x.png 1390w, ./assets/image-hero-tablet@2x.png 2092w" sizes="100vw">
-            </div>
-                <!--<source srcset="./assets/image-hero-mobile.webp 435w, ./assets/image-hero-tablet.webp 695w, ./assets/image-hero-mobile@2x.png 870w, ./assets/image-hero-desktop.webp 1046w, ./assets/image-hero-mobile@2x.webp  1390w, ./assets/image-hero-tablet@2x.webp 2092w" type="image/webp" sizes="100w"  width="435" height="409" alt="woman drinking a cup of coffee">-->
- 
-        </aside>
+        <figure>
+            <picture>
+                <source media="(max-width:39.99em)" srcset="./assets/image-hero-mobile.webp 435w" sizes="100vw" type="image/webp">
+                <source media="(max-width: 39.99em)" srcset="./assets/image-hero-mobile.png 435w" sizes="100vw" type="image/png">
+
+                <source media="(min-width:40em)" srcset="./assets/image-hero-tablet.webp 695w" sizes="100vw" type="image/webp">
+                <source media="(min-width:40em)" srcset="./assets/image-hero-tablet.png 695w" sizes="100vw" type="image/png">
+                <source media="(min-width:65em)" srcset="./assets/image-hero-desktop.webp 1046w" sizes="100vw" type="image/webp">
+                <source media="(min-width:65em)" srcset="./assets/image-hero-desktop.png 1046w" sizes="100vw" type="image/png">
+                <img src="./assets/image-hero-mobile.png" width="435" height="409" alt="woman drinking a cup of coffee">
+            </picture>
+        </figure>
     </div>
 
-    
+
 
     <main>
         <h1>Check out our most popular courses!</h1>
 
         <section>
             <h2>Animation</h2>
-            Learn the latest animation techniques to create stunning motion
-            design and captivate your audience.
+            <span aria-hidden="true" class="sr-only"><img src="./assets/icon-animation.svg" alt="icon-animation" class="sr-only"></span>
+            <p>Learn the latest animation techniques to create stunning motion
+                design and captivate your audience.</p>
             <a href="#">Get Started</a>
         </section>
 
         <section>
             <h2>Design</h2>
-            Create beautiful, usable interfaces to help shape the future of
-            how the web looks.
+            <span aria-hidden="true" class="sr-only"><img src="./assets/icon-design.svg" alt="icon-design" class="sr-only"></span>
+            <p>Create beautiful, usable interfaces to help shape the future of
+                how the web looks.</p>
             <a href="#">Get Started</a>
         </section>
 
         <section>
             <h2>Photography</h2>
-            Explore critical fundamentals like lighting, composition, and focus
-            to capture exceptional photos.
+            <span aria-hidden="true" class="sr-only"><img src="./assets/icon-photography.svg" alt="icon-photography" class="sr-only"></span>
+            <p>Explore critical fundamentals like lighting, composition, and focus
+                to capture exceptional photos.</p>
             <a href="#">Get Started</a>
         </section>
 
         <section>
             <h2>Crypto</h2>
-            All you need to know to get started investing in crypto. Go from beginner
-            to advanced with this 54 hour course.
+            <span aria-hidden="true" class="sr-only"><img src="./assets/icon-crypto.svg" alt="icon-crypto" class="sr-only"></span>
+            <p>All you need to know to get started investing in crypto. Go from beginner
+                to advanced with this 54 hour course.</p>
             <a href="#">Get Started</a>
         </section>
 
         <section>
             <h2>Business</h2>
-            A step-by-step playbook to help you start, scale, and sustain your business
-            without outside investment.
+            <span aria-hidden="true" class="sr-only"><img src="./assets/icon-business.svg" alt="icon-business" class="sr-only"></span>
+            <p>A step-by-step playbook to help you start, scale, and sustain your business
+                without outside investment.</p>
             <a href="#">Get Started</a>
         </section>
     </main>
@@ -82,10 +99,23 @@
 
 
     <footer>
-        <div><img src="./assets/logo-light.svg">
-             <button class="button3">Get Started</button></div>
+        <div><img src="./assets/logo-light.svg" alt="logo skilled" class="logo">
+            <button class="button3">Get Started</button>
+        </div>
         <div class="attribution">Challenged by <a href="https://www.frontendmentor.io/challenges/skilled-elearning-landing-page-S1ObDrZ8q">Frontendmentor</a>, coded by <a href="linkedin.com/in/christ-kévin-touga-watat-32026712a"> Christ Touga Watat</a></div>
     </footer>
-</body>
+</body></html>
 
-</html>
+
+<!--<figure>
+            <picture>
+                <source media="(max-width:39.99em)" srcset="./assets/image-hero-mobile.webp 435w" sizes="100vw">
+                <source media="(max-width: 39.99em)" srcset="./assets/image-hero-mobile.png 1x, ./assets/image-hero-mobile@2x.png 2x" type="image/png">
+
+                <source media="(min-width:40em)" srcset="./assets/image-hero-tablet.webp 1x, ./assets/image-hero-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width:40em)" srcset="./assets/image-hero-tablet.png 1x, ./assets/image-hero-tablet@2x.png 2x" type="image/png">
+                <source media="(min-width:65em)" srcset="./assets/image-hero-desktop.webp 1x, ./assets/image-hero-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width:65em)" srcset="./assets/image-hero-desktop.png 1x, ./assets/image-hero-desktop@2x.png 2x" type="image/png">
+                <img src="./assets/image-hero-mobile.png" srcset="./assets/image-hero-tablet.png 695w, ./assets/image-hero-desktop.png 1046w" width="435" height="409" sizes="100vw" alt="woman drinking a cup of coffee">
+            </picture>
+        </figure>-->
