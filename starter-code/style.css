@@ -63,7 +63,7 @@ body {
     font-weight: var(--fw-basis);
     font-family: var(--ff);
     text-align: left;
-    background-color: white;
+    background-color: var(--bg-body);
     overflow: hidden;
 
 }
@@ -159,7 +159,6 @@ section p {
 
 
 picture {
-    display: block;
     width: 100%;
 }
 
@@ -167,12 +166,11 @@ picture {
 picture img {
     max-width: 100%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    line-height: 0;
+    margin: 0 auto;
 }
 
 main {
-    background-color: var(--bg-body);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -278,10 +276,10 @@ section {
     }
 
 
-    picture img {
+    picture {
         position: absolute;
-        left: 60%;
-        top: 0%;
+        left: 50%;
+        top: -10%;
 
 
         /*top: -55px;
@@ -347,6 +345,6 @@ section {
     }
 
     picture img {
-        bottom: 70%;
+        width: 100%;
     }
 }
